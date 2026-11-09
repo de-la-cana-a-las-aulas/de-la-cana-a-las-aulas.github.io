@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>De la Caña a las Aulas</title>
+<meta name="description" content="El viaje económico de una botella de aguardiente tapa verde en Antioquia: de la caña de azúcar a la educación pública.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Fredoka:wght@500;600;700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FEF9F4;
+  --cream-2:#F6EEE3;
+  --sage:#DEE7DC;
+  --sage-2:#CBD9C7;
+  --green:#3F7F3A;
+  --green-2:#5E9A56;
+  --green-dark:#1F4A1E;
+  --ink:#151515;
+  --ink-2:#3B3B3B;
+  --muted:#6B6B66;
+  --red:#B8342B;
+  --line:#151515;
+  --radius:22px;
+  --maxw:1120px;
+  --read:700px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:"Montserrat",system-ui,sans-serif;font-size:17px;line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:var(--green)}
+.display{font-family:"Luckiest Guy",cursive;font-weight:400;letter-spacing:.02em;line-height:1;text-transform:uppercase}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.read{max-width:var(--read);margin:0 auto}
+.read p{margin:0 0 1.2em;text-align:justify;hyphens:auto}
+
+/* ---------- Nav ---------- */
+.nav{position:sticky;top:0;z-index:50;background:rgba(254,249,244,.92);backdrop-filter:blur(8px);border-bottom:2px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:20px;height:60px}
+.brand{font-family:"Luckiest Guy";font-size:20px;color:var(--ink);text-decoration:none;white-space:nowrap;letter-spacing:.02em}
+.brand span{color:var(--green)}
+.nav ul{list-style:none;margin:0 0 0 auto;padding:0;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.nav ul::-webkit-scrollbar{display:none}
+.nav a.lk{display:block;padding:6px 12px;border-radius:999px;font-size:13px;font-weight:700;color:var(--ink-2);text-decoration:none;white-space:nowrap;transition:background .2s,color .2s}
+.nav a.lk:hover{background:var(--sage)}
+.nav a.lk.on{background:var(--green);color:#fff}
+.progress{position:absolute;left:0;bottom:-2px;height:4px;background:var(--green);width:0;transition:width .1s linear}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;padding:72px 0 40px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:32px;align-items:center}
+.kicker{display:inline-block;font-weight:800;font-size:12px;letter-spacing:.14em;text-transform:uppercase;background:var(--sage);border:2px solid var(--line);border-radius:999px;padding:6px 14px;margin-bottom:22px}
+.hero h1{font-size:clamp(40px,6.4vw,82px);margin:0 0 26px}
+.hero h1 .g{color:var(--green)}
+.hero h1 .sub{display:block;font-size:.42em;line-height:1.15;margin-top:16px;color:var(--ink-2)}
+.byline{font-size:15px;color:var(--ink-2);max-width:560px;border-left:4px solid var(--green);padding-left:16px;margin:0}
+.byline strong{color:var(--ink)}
+.hero-art{position:relative;display:flex;justify-content:center}
+.hero-art img{width:min(330px,80%);filter:drop-shadow(0 18px 0 rgba(0,0,0,.06));animation:bob 3.2s ease-in-out infinite}
+.hero-art .blob{position:absolute;inset:8% 4% 2%;background:var(--sage);border-radius:48% 52% 44% 56%/56% 44% 56% 44%;z-index:-1;border:2px solid var(--line)}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-14px) rotate(2deg)}}
+.scroll-hint{display:flex;align-items:center;gap:10px;margin-top:34px;font-weight:700;font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.12em}
+.scroll-hint i{width:22px;height:34px;border:2px solid var(--ink);border-radius:12px;position:relative}
+.scroll-hint i:after{content:"";position:absolute;left:50%;top:6px;width:4px;height:8px;margin-left:-2px;background:var(--green);border-radius:2px;animation:wheel 1.6s infinite}
+@keyframes wheel{0%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(12px)}}
+
+/* ---------- Journey strip ---------- */
+.journey{margin:24px auto 0;padding:0 24px;max-width:var(--maxw)}
+.journey ol{list-style:none;margin:0;padding:18px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px;background:#fff;border:2px solid var(--line);border-radius:var(--radius);box-shadow:6px 6px 0 var(--line)}
+.journey li{position:relative;text-align:center;padding:10px 6px}
+.journey li+li:before{content:"➜";position:absolute;left:-12px;top:50%;transform:translateY(-50%);color:var(--green);font-size:18px}
+.journey .ico{font-size:30px;line-height:1}
+.journey b{display:block;font-family:"Fredoka";font-size:20px;color:var(--green);margin-top:6px}
+.journey small{display:block;font-size:12px;font-weight:600;color:var(--ink-2);line-height:1.35}
+
+/* ---------- Sections ---------- */
+section.sec{padding:96px 0 40px;position:relative}
+.sec-head{text-align:center;margin-bottom:44px}
+.sec-num{display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:50%;background:var(--green);color:#fff;font-family:"Luckiest Guy";font-size:24px;border:2px solid var(--line);box-shadow:3px 3px 0 var(--line);margin-bottom:16px}
+.sec-head h2{font-size:clamp(30px,4.4vw,52px);margin:0 auto;max-width:900px}
+.sec-head h2 .g{color:var(--green)}
+h3.sub{font-family:"Fredoka";font-weight:700;font-size:24px;line-height:1.25;color:var(--green-dark);margin:44px 0 14px}
+.intro p:first-child::first-letter{font-family:"Luckiest Guy";float:left;font-size:4.2em;line-height:.85;padding:6px 10px 0 0;color:var(--green)}
+
+.split{display:grid;grid-template-columns:1fr 240px;gap:40px;align-items:start;max-width:980px;margin:0 auto}
+.split .side{position:sticky;top:110px}
+.split .side img{width:100%;max-width:220px;margin:0 auto}
+
+/* Cost cards (Origen) */
+.cards{list-style:none;padding:0;margin:28px 0;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.card{background:var(--sage);border:2px solid var(--line);border-radius:var(--radius);padding:22px 22px 20px;box-shadow:5px 5px 0 var(--line);font-size:15.5px;line-height:1.65;position:relative}
+.card strong{display:block;font-family:"Fredoka";font-size:19px;color:var(--green-dark);margin-bottom:6px}
+.card .tag{position:absolute;top:-14px;right:16px;background:var(--green);color:#fff;font-family:"Fredoka";font-weight:700;font-size:15px;padding:2px 12px;border-radius:999px;border:2px solid var(--line)}
+.pull{font-family:"Fredoka";font-weight:600;font-size:clamp(20px,2.4vw,26px);line-height:1.4;color:var(--green-dark);border-top:2px solid var(--line);border-bottom:2px solid var(--line);padding:22px 0;margin:36px 0;text-align:center}
+
+/* Table */
+.tbl-wrap{margin:30px 0;border:2px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:6px 6px 0 var(--line);background:#fff}
+.tbl-scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:14.5px;line-height:1.45;min-width:620px}
+th{background:var(--green);color:#fff;font-family:"Fredoka";font-weight:600;font-size:15px;text-align:left;padding:14px 16px}
+td{padding:14px 16px;border-top:1.5px solid #E4E0D8;vertical-align:middle}
+td:first-child{font-weight:700}
+td.pct{font-family:"Fredoka";font-weight:700;font-size:20px;color:var(--green);width:150px}
+.bar{display:block;height:8px;background:var(--sage);border-radius:6px;margin-top:6px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--green);border-radius:6px;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.in .bar i{width:var(--w)}
+
+.big3{display:grid;grid-template-columns:1fr;gap:22px;margin-top:20px}
+.pct-card{display:grid;grid-template-columns:150px 1fr;gap:24px;align-items:start;background:#fff;border:2px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:5px 5px 0 var(--line)}
+.pct-card .num{font-family:"Fredoka";font-weight:700;font-size:58px;line-height:1;color:var(--green);text-align:center}
+.pct-card .num small{display:block;font-size:12px;font-family:"Montserrat";font-weight:700;color:var(--ink-2);letter-spacing:.08em;text-transform:uppercase;margin-top:8px;line-height:1.3}
+.pct-card h3{font-family:"Fredoka";font-size:22px;margin:0 0 8px;color:var(--green-dark)}
+.pct-card p{margin:0;font-size:15.5px;line-height:1.7;text-align:justify}
+
+/* Money flow (Torrente) */
+.flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:14px;align-items:stretch;margin:34px 0}
+.flow .op{align-self:center;font-family:"Luckiest Guy";font-size:40px;color:var(--green)}
+.flow .box{background:var(--sage);border:2px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:5px 5px 0 var(--line);font-size:15px;line-height:1.6}
+.flow .box.total{background:var(--green);color:#fff}
+.flow .box.total strong,.flow .box.total .amt{color:#fff}
+.flow .amt{font-family:"Fredoka";font-weight:700;font-size:28px;color:var(--green-dark);line-height:1.1;margin-bottom:8px}
+.flow .box strong{display:block;font-family:"Fredoka";color:var(--green-dark);font-size:17px;margin-bottom:4px}
+.stats{list-style:none;padding:0;margin:26px 0;display:grid;gap:16px}
+.stat{display:grid;grid-template-columns:1fr 110px;gap:18px;align-items:center;background:#fff;border:2px solid var(--line);border-radius:var(--radius);padding:20px 22px;box-shadow:5px 5px 0 var(--line);font-size:15.5px;line-height:1.65}
+.stat strong{font-family:"Fredoka";color:var(--green-dark);font-size:17px}
+.stat .up{text-align:center;font-family:"Fredoka";font-weight:700;font-size:26px;color:var(--green);line-height:1}
+.stat .up small{display:block;font-family:"Montserrat";font-size:11px;font-weight:700;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-top:6px}
+
+/* Universities */
+.unis{list-style:none;padding:0;margin:26px 0;display:grid;gap:14px}
+.uni{background:#fff;border:2px solid var(--line);border-radius:18px;padding:18px 20px;box-shadow:4px 4px 0 var(--line);font-size:15.5px;line-height:1.65}
+.uni strong{font-family:"Fredoka";color:var(--green-dark);font-size:17px}
+.uni .bar{height:12px;margin-top:12px}
+.uni .bar i{background:linear-gradient(90deg,var(--green),var(--green-2))}
+.callout{display:grid;grid-template-columns:120px 1fr;gap:22px;align-items:center;background:var(--sage);border:2px solid var(--line);border-radius:var(--radius);padding:24px;margin:20px 0;box-shadow:5px 5px 0 var(--line)}
+.callout .ico{font-size:58px;text-align:center}
+.callout p{margin:0;text-align:justify}
+
+/* ---------- Carousel ---------- */
+.info{background:var(--sage);border-top:2px solid var(--line);border-bottom:2px solid var(--line);padding:80px 0 70px;margin-top:60px}
+.info .sec-head h2{font-size:clamp(28px,4vw,46px)}
+.carousel{position:relative;max-width:1000px;margin:0 auto}
+.track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;border:2px solid var(--line);border-radius:28px;background:var(--cream);box-shadow:8px 8px 0 var(--line)}
+.track::-webkit-scrollbar{display:none}
+.slide{flex:0 0 100%;scroll-snap-align:start;min-height:520px;padding:48px 56px;display:grid;align-items:center;position:relative}
+.slide .note{position:absolute;bottom:18px;left:0;right:0;text-align:center;font-size:11.5px;font-weight:700;color:var(--muted)}
+.s-cover{grid-template-columns:1.2fr .8fr;gap:24px}
+.s-cover h3{font-size:clamp(38px,5.6vw,68px);margin:0}
+.s-cover img{max-height:420px;margin:0 auto;animation:peek 3s ease-in-out infinite}
+@keyframes peek{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg) translateY(-6px)}}
+.s-cover .swipe{margin-top:22px;font-weight:700;font-size:14px;color:var(--green)}
+.s-cost{grid-template-columns:240px 1fr;gap:48px}
+.gauge{width:100%;max-width:220px;margin:0 auto}
+.gauge .liq{transform:translateY(100%);transition:transform 1.4s cubic-bezier(.2,.8,.2,1)}
+.slide.active .gauge .liq{transform:translateY(calc(100% - var(--p)))}
+.s-cost .lbl{font-family:"Fredoka";font-weight:700;font-size:clamp(24px,3vw,34px);line-height:1.15;margin:0 0 8px}
+.s-cost .pctbig{font-family:"Fredoka";font-weight:700;font-size:clamp(90px,14vw,170px);line-height:.9;color:var(--green);font-style:italic}
+.s-cost .price{display:inline-block;margin-top:16px;font-family:"Fredoka";font-weight:700;font-size:26px;background:var(--sage);border:2px solid var(--line);border-radius:999px;padding:6px 20px}
+.s-cost .rank{font-weight:800;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.s-text{grid-template-columns:1fr}
+.s-text p{font-size:clamp(17px,2vw,21px);line-height:1.7;max-width:720px;margin:0 auto;text-align:justify}
+.s-text .vs{display:flex;justify-content:center;align-items:center;gap:18px;margin-bottom:30px;flex-wrap:wrap}
+.s-text .vs div{text-align:center;background:var(--sage);border:2px solid var(--line);border-radius:18px;padding:12px 22px}
+.s-text .vs b{display:block;font-family:"Fredoka";font-size:34px;color:var(--green-dark);line-height:1.1}
+.s-text .vs small{font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+.s-text .vs .arrow{font-family:"Luckiest Guy";font-size:34px;color:var(--green);background:none;border:0;padding:0}
+.s-peso{grid-template-columns:.8fr 1.2fr;gap:30px}
+.s-peso img{max-height:400px;margin:0 auto}
+.s-peso h3{font-size:clamp(36px,5vw,60px);margin:0 0 20px;text-align:right}
+.s-peso p{font-size:18px;text-align:justify;margin:0}
+.s-dist{grid-template-columns:1fr}
+.dist{display:grid;gap:14px}
+.drow{display:grid;grid-template-columns:200px 1fr;gap:18px;align-items:center}
+.drow .name{font-weight:800;font-size:15px;line-height:1.3}
+.drow .name small{display:block;font-weight:500;color:var(--muted);font-size:12.5px}
+.drow .bar{height:40px;border-radius:12px;border:2px solid var(--line);background:#fff;margin:0}
+.drow .bar i{display:flex;align-items:center;justify-content:flex-end;padding-right:10px;border-radius:0;font-family:"Fredoka";font-weight:700;color:#fff;font-style:normal;font-size:18px;min-width:52px}
+.slide.active .drow .bar i{width:var(--w)}
+.drow .imp{grid-column:2;font-size:13px;color:var(--ink-2);margin-top:-8px;line-height:1.4}
+.s-dist h4{font-family:"Fredoka";font-size:22px;margin:0 0 20px;text-align:center}
+.ctrl{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:28px}
+.btn{width:52px;height:52px;border-radius:50%;border:2px solid var(--line);background:#fff;font-size:22px;cursor:pointer;box-shadow:3px 3px 0 var(--line);transition:transform .15s,box-shadow .15s,background .2s;color:var(--ink)}
+.btn:hover{background:var(--green);color:#fff}
+.btn:active{transform:translate(3px,3px);box-shadow:0 0 0 var(--line)}
+.btn:disabled{opacity:.35;cursor:default}
+.dots{display:flex;gap:8px}
+.dots button{width:12px;height:12px;border-radius:999px;border:2px solid var(--line);background:#fff;padding:0;cursor:pointer;transition:width .25s,background .25s}
+.dots button.on{width:32px;background:var(--green)}
+.counter{font-family:"Fredoka";font-weight:700;font-size:15px;min-width:48px;text-align:center}
+.dl{display:flex;justify-content:center;margin-top:22px}
+.dl a{font-weight:700;font-size:14px;color:var(--ink);text-decoration:none;border-bottom:2px solid var(--green);padding-bottom:2px}
+
+/* ---------- Video ---------- */
+.video{background:var(--green-dark);color:#fff;padding:90px 0 100px;margin-top:80px;position:relative;overflow:hidden;border-top:2px solid var(--line);border-bottom:2px solid var(--line)}
+.video:before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.07) 2px,transparent 2px);background-size:26px 26px;pointer-events:none;z-index:0}
+.video > *{position:relative;z-index:1}
+.video .sec-head h2{color:#fff}
+.video .sec-head h2 .g{color:#A9D7A0}
+.video .kicker{background:#A9D7A0;color:var(--ink)}
+.video-stage{position:relative;max-width:900px;margin:0 auto}
+.frame{position:relative;aspect-ratio:16/9;border:3px solid #000;border-radius:24px;overflow:hidden;background:#000;box-shadow:10px 10px 0 #000}
+.frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-stage .pl{position:absolute;bottom:-30px;width:150px;z-index:2}
+.video-stage .pl.l{left:-130px}
+.video-stage .pl.r{right:-120px;width:130px}
+.yt{display:block;text-align:center;margin-top:26px;color:#A9D7A0;font-weight:700;font-size:14px}
+
+/* ---------- Conclusion & footer ---------- */
+.concl{background:#fff;border:2px solid var(--line);border-radius:28px;padding:48px 52px;box-shadow:8px 8px 0 var(--line);max-width:860px;margin:0 auto;position:relative}
+.concl p{text-align:justify;margin:0 0 1.2em}
+.concl .think{position:absolute;right:-90px;top:-80px;width:150px}
+.warn{background:var(--ink);color:#fff;text-align:center;padding:30px 24px;margin-top:100px}
+.warn p{margin:0 auto;max-width:900px;font-weight:800;font-size:clamp(15px,1.8vw,19px);letter-spacing:.02em;text-transform:uppercase;line-height:1.5}
+footer{background:var(--ink);color:#bdbdb6;padding:0 24px 36px;text-align:center;font-size:13px}
+footer img{width:70px;margin:0 auto 10px}
+
+/* ---------- Páginas ---------- */
+.page{display:none;min-height:calc(100vh - 260px)}
+.page.current{display:block;animation:pgIn .55s ease}
+@keyframes pgIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.info.page,.video.page{margin-top:0}
+.video.page{padding-bottom:70px}
+.cta{display:inline-block;margin-top:30px;background:var(--green);color:#fff;text-decoration:none;font-weight:800;font-size:15px;letter-spacing:.04em;padding:14px 26px;border-radius:999px;border:2px solid var(--line);box-shadow:4px 4px 0 var(--line);transition:transform .15s,box-shadow .15s}
+.cta:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--line)}
+.cta:active{transform:translate(4px,4px);box-shadow:0 0 0 var(--line)}
+.pager{max-width:var(--maxw);margin:70px auto 0;padding:0 24px 20px;display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:center}
+.video .pager{margin-top:60px}
+.pager a{display:flex;flex-direction:column;gap:2px;text-decoration:none;color:var(--ink);background:#fff;border:2px solid var(--line);border-radius:18px;padding:14px 20px;box-shadow:4px 4px 0 var(--line);transition:transform .15s,box-shadow .15s,background .2s}
+.pager a:hover{background:var(--sage);transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--line)}
+.pager a small{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.pager a span{font-family:"Fredoka";font-weight:700;font-size:18px;line-height:1.25}
+.pager .nx{grid-column:3;text-align:right;align-items:flex-end}
+.pager .pv{grid-column:1}
+.pager .pos{grid-column:2;font-family:"Fredoka";font-weight:700;font-size:14px;color:var(--muted);white-space:nowrap}
+.video .pager .pos{color:#A9D7A0}
+
+/* ---------- Reveal ---------- */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .rv{opacity:1;transform:none}
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1200px){ .concl .think{display:none} }
+@media (max-width:900px){
+  .hero .wrap{grid-template-columns:1fr}
+  .hero-art{order:-1}
+  .hero-art img{width:200px}
+  .split{grid-template-columns:1fr}
+  .split .side{display:none}
+  .video-stage .pl{display:none}
+  .concl .think{display:none}
+  .flow{grid-template-columns:1fr}
+  .flow .op{text-align:center;font-size:30px}
+  .s-cover,.s-cost,.s-peso{grid-template-columns:1fr;text-align:center}
+  .s-cover img{max-height:240px;order:-1}
+  .s-peso img{max-height:220px}
+  .s-peso h3{text-align:center}
+  .gauge{max-width:130px}
+  .slide{padding:36px 22px 54px;min-height:560px}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .wrap{padding:0 16px}
+  .nav .wrap{flex-direction:column;align-items:flex-start;height:auto;gap:4px;padding-top:10px;padding-bottom:8px}
+  .nav ul{margin:0 -16px;padding:0 16px;width:calc(100% + 32px)}
+  html{scroll-padding-top:110px}
+  .pager{grid-template-columns:1fr 1fr;padding:0 16px 20px}
+  .pager .pos{grid-column:1/-1;grid-row:1;text-align:center}
+  .pager .pv{grid-column:1;grid-row:2}
+  .pager .nx{grid-column:2;grid-row:2}
+  .pager a span{font-size:15px}
+  .journey{padding:0 16px}
+  .journey ol{grid-template-columns:1fr 1fr;gap:6px}
+  .journey li+li:before{display:none}
+  .cards{grid-template-columns:1fr}
+  .pct-card{grid-template-columns:1fr;gap:10px}
+  .pct-card .num{text-align:left}
+  .stat{grid-template-columns:1fr}
+  .stat .up{text-align:left}
+  .callout{grid-template-columns:1fr}
+  .callout .ico{text-align:left}
+  .drow{grid-template-columns:1fr;gap:6px}
+  .drow .imp{grid-column:1;margin-top:0}
+  .concl{padding:30px 22px}
+  .read p,.concl p,.pct-card p,.callout p,.s-text p,.s-peso p{text-align:left}
+  section.sec{padding-top:72px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Secciones">
+  <div class="wrap">
+    <a class="brand" href="#inicio">De la Caña <span>a las Aulas</span></a>
+    <ul>
+      <li><a class="lk" href="#inicio">Inicio</a></li>
+      <li><a class="lk" href="#origen">Origen</a></li>
+      <li><a class="lk" href="#infografia">Infografía</a></li>
+      <li><a class="lk" href="#facturacion">Facturación</a></li>
+      <li><a class="lk" href="#video">Video</a></li>
+      <li><a class="lk" href="#recursos">Recursos</a></li>
+      <li><a class="lk" href="#aulas">Educación</a></li>
+      <li><a class="lk" href="#conclusion">Conclusión</a></li>
+    </ul>
+  </div>
+  <div class="progress" id="progress"></div>
+</nav>
+
+<!-- ================= PORTADA ================= -->
+<div class="page" id="inicio" data-title="Inicio">
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <span class="kicker">Reportaje · Vigencia 2025</span>
+      <h1 class="display doc-h">De la Caña <span class="g">a las Aulas</span>:<span class="sub">El Viaje Económico de una Botella de Aguardiente Tapa Verde en Antioquia</span></h1>
+      <p class="byline doc"><strong>Por María Isabel Villa Avila &amp; Emmanuel Amaya Ramírez</strong> Con base en las revelaciones directivas de la Fábrica de Licores de Antioquia y los Estados Financieros Agregados del Departamento de Antioquia para la vigencia 2025.</p>
+      <a class="cta" href="#origen">Comenzar el recorrido ➜</a>
+    </div>
+    <div class="hero-art"><div class="blob"></div><img src="img/pose-20.png" alt="Botella de aguardiente animada con los brazos en alto"></div>
+  </div>
+</header>
+
+<div class="journey rv" aria-hidden="true">
+  <ol>
+    <li><div class="ico">🌾</div><b>Caña</b><small>Valle del Cauca</small></li>
+    <li><div class="ico">🏭</div><b>$4.500</b><small>Planta de Itagüí</small></li>
+    <li><div class="ico">🧾</div><b>$44.700</b><small>Precio de facturación</small></li>
+    <li><div class="ico">🎓</div><b>Aulas</b><small>Salud y educación</small></li>
+  </ol>
+</div>
+
+<section class="sec" style="padding-top:64px">
+  <div class="wrap">
+    <div class="read intro rv">
+      <p class="doc">Cuando estamos bebiendo una botella de aguardiente tapa verde de 750 mililitros, en medio de la euforia y las alteraciones cognitivas que genera el consumo de alcohol, pocas veces imaginamos la compleja red industrial, fiscal y social que se despliega tras el cristal de vidrio. Lo que comienza como un cultivo de caña de azúcar en los campos del Valle del Cauca termina convertida en una de las principales arterias de financiamiento para la salud pública, la infraestructura educativa y el sostenimiento de la Universidad de Antioquia.</p>
+      <p class="doc">Durante el 2025, el recorrido económico de esta botella — que es además la presentación que representa aproximadamente el 60% de las ventas de la Fábrica de Licores y Alcoholes de Antioquia (FLA)— revela cómo un costo de producción que no supera los $4.500 pesos se transforman en un precio de facturación de $44.700 pesos, inyectando cientos de miles de millones de pesos a las arcas departamentales.</p>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<!-- ================= 1. ORIGEN ================= -->
+<section class="sec page" id="origen" data-title="El Origen Industrial">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="sec-num">1</div>
+      <h2 class="display doc-h">El Origen Industrial: <span class="g">Materias Primas y Costos en la Planta de Itagüí</span></h2>
+    </div>
+    <div class="split">
+      <div class="read" style="margin:0">
+        <div class="rv">
+          <p class="doc">El viaje de la botella tapa verde arranca en el sector agrícola con la obtención del alcohol extra neutro destilado a partir de la caña de azúcar. Para abastecer sus líneas de producción, la FLA mantiene convenios estratégicos con empresas del suroccidente colombiano como Ambiocom y la Industria Licorera del Valle. Ocasionalmente, cuando las licitaciones públicas de abastecimiento son adjudicadas a firmas importadoras, el insumo proviene de países como Brasil o Ecuador.</p>
+          <p class="doc">De acuerdo con el director financiero de la FLA, Jamer Arturo Franco Acevedo, el alcohol se adquiere en el mercado internacional o nacional a un costo promedio de 1,33 dólares por litro. Al ser llevado a la planta de la fábrica e integrado en la formulación secreta del producto —junto con el agua purificada y los aceites esenciales de anís—, el contenido líquido de una botella de 750 ml alcanza un costo directo aproximado de $800 pesos colombianos, sujeto a las variaciones del dólar.</p>
+        </div>
+        <p class="pull rv doc">Sin embargo, el verdadero peso de la estructura de costos de fabricación no recae en el licor, sino en los componentes de su empaque:</p>
+        <ul class="cards">
+          <li class="card rv doc"><span class="tag" aria-hidden="true">33%</span><strong>El envase de vidrio:</strong> Es el insumo individual más costoso de la botella. Representa cerca del 33% del costo total de producción, con un valor de aproximadamente $1.150 pesos por unidad.</li>
+          <li class="card rv doc"><span class="tag" aria-hidden="true">25%</span><strong>La tapa de seguridad:</strong> Constituye el segundo componente de mayor relevancia económica, representando alrededor del 25% del costo de fabricación, con un valor unitario de $806 pesos.</li>
+          <li class="card rv doc"><span class="tag" aria-hidden="true">$239</span><strong>Etiqueta y contraetiqueta:</strong> El vestuario gráfico del aguardiente tiene un costo consolidado de $239 también por unidad.</li>
+          <li class="card rv doc"><span class="tag" aria-hidden="true">CIF</span><strong>Embalaje y costos indirectos:</strong> El ensamblaje final incluye las cajas de cartón para el transporte masivo, la mano de obra industrial y los costos indirectos de fabricación (CIF), como el consumo de agua y energía eléctrica en la planta.</li>
+        </ul>
+        <div class="rv">
+          <p class="doc">En entrevista para De La Urbe, el director financiero de la FLA señala que, sumando todos estos eslabones, el costo total de fabricación de una botella de aguardiente tapa verde de 750 ml oscila entre los $4.200 y los $4.500 pesos colombianos. La variación de $300 pesos responden a las negociaciones de volumen con los proveedores y al comportamiento del dólar estadounidense.</p>
+        </div>
+      </div>
+      <aside class="side" aria-hidden="true"><img src="img/pose-04.png" alt=""></aside>
+    </div>
+  </div>
+</section>
+
+<!-- ================= INFOGRAFÍA (CARRUSEL) ================= -->
+<section class="info page" id="infografia" data-title="Infografía"aria-roledescription="carrusel" aria-label="Infografía">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="kicker">Infografía · desliza ➜</span>
+    </div>
+    <div class="carousel rv">
+      <div class="track" id="track" tabindex="0">
+
+        <!-- 1 Portada -->
+        <div class="slide s-cover" aria-label="1 de 9">
+          <div>
+            <h3 class="display">¿Qué hay detrás de una botella de <span style="color:var(--green)">$44.700</span>?</h3>
+            <div class="swipe">Desliza para ver cada componente ➜</div>
+          </div>
+          <img src="img/botella-lupa.png" alt="Botella de aguardiente observando con una lupa">
+        </div>
+
+        <!-- 2-6 Costos -->
+        <div class="slide s-cost" aria-label="2 de 9" style="--p:33%">
+          <svg class="gauge" viewBox="0 0 120 260" aria-hidden="true"><defs><clipPath id="b1"><path d="M46 6h28v40c0 12 30 22 30 54v140c0 8-6 14-14 14H30c-8 0-14-6-14-14V100c0-32 30-42 30-54z"/></clipPath></defs><g clip-path="url(#b1)"><rect width="120" height="260" fill="#fff"/><rect class="liq" y="0" width="120" height="260" fill="#3F7F3A"/></g><path d="M46 6h28v40c0 12 30 22 30 54v140c0 8-6 14-14 14H30c-8 0-14-6-14-14V100c0-32 30-42 30-54z" fill="none" stroke="#151515" stroke-width="4"/><rect x="43" y="2" width="34" height="22" rx="4" fill="#3F7F3A" stroke="#151515" stroke-width="4"/></svg>
+          <div><div class="rank">Componente más costoso</div><p class="lbl">Envase de vidrio</p><div class="pctbig">33%</div><span class="price">$1,150 pesos</span></div>
+          <div class="note">(valores aproximados de acuerdo a entrevista con director financiero de la FLA)</div>
+        </div>
+        <div class="slide s-cost" aria-label="3 de 9" style="--p:25%">
+          <svg class="gauge" viewBox="0 0 120 260" aria-hidden="true"><g clip-path="url(#b1)"><rect width="120" height="260" fill="#fff"/><rect class="liq" width="120" height="260" fill="#3F7F3A"/></g><path d="M46 6h28v40c0 12 30 22 30 54v140c0 8-6 14-14 14H30c-8 0-14-6-14-14V100c0-32 30-42 30-54z" fill="none" stroke="#151515" stroke-width="4"/><rect x="43" y="2" width="34" height="22" rx="4" fill="#3F7F3A" stroke="#151515" stroke-width="4"/></svg>
+          <div><div class="rank">Segundo componente</div><p class="lbl">Tapa de seguridad</p><div class="pctbig">25%</div><span class="price">$806 pesos</span></div>
+          <div class="note">(valores aproximados de acuerdo a entrevista con director financiero de la FLA)</div>
+        </div>
+        <div class="slide s-cost" aria-label="4 de 9" style="--p:19%">
+          <svg class="gauge" viewBox="0 0 120 260" aria-hidden="true"><g clip-path="url(#b1)"><rect width="120" height="260" fill="#fff"/><rect class="liq" width="120" height="260" fill="#3F7F3A"/></g><path d="M46 6h28v40c0 12 30 22 30 54v140c0 8-6 14-14 14H30c-8 0-14-6-14-14V100c0-32 30-42 30-54z" fill="none" stroke="#151515" stroke-width="4"/><rect x="43" y="2" width="34" height="22" rx="4" fill="#3F7F3A" stroke="#151515" stroke-width="4"/></svg>
+          <div><div class="rank">Tercer componente</div><p class="lbl">Embalaje y costos indirectos</p><div class="pctbig">19%</div><span class="price">$855 pesos</span></div>
+          <div class="note">(valores aproximados de acuerdo a entrevista con director financiero de la FLA)</div>
+        </div>
+        <div class="slide s-cost" aria-label="5 de 9" style="--p:18%">
+          <svg class="gauge" viewBox="0 0 120 260" aria-hidden="true"><g clip-path="url(#b1)"><rect width="120" height="260" fill="#fff"/><rect class="liq" width="120" height="260" fill="#3F7F3A"/></g><path d="M46 6h28v40c0 12 30 22 30 54v140c0 8-6 14-14 14H30c-8 0-14-6-14-14V100c0-32 30-42 30-54z" fill="none" stroke="#151515" stroke-width="4"/><rect x="43" y="2" width="34" height="22" rx="4" fill="#3F7F3A" stroke="#151515" stroke-width="4"/></svg>
+          <div><div class="rank">Cuarto componente</div><p class="lbl">Licor</p><div class="pctbig">18%</div><span class="price">$800 pesos</span></div>
+          <div class="note">(valores aproximados de acuerdo a entrevista con director financiero de la FLA)</div>
+        </div>
+        <div class="slide s-cost" aria-label="6 de 9" style="--p:5%">
+          <svg class="gauge" viewBox="0 0 120 260" aria-hidden="true"><g clip-path="url(#b1)"><rect width="120" height="260" fill="#fff"/><rect class="liq" width="120" height="260" fill="#3F7F3A"/></g><path d="M46 6h28v40c0 12 30 22 30 54v140c0 8-6 14-14 14H30c-8 0-14-6-14-14V100c0-32 30-42 30-54z" fill="none" stroke="#151515" stroke-width="4"/><rect x="43" y="2" width="34" height="22" rx="4" fill="#3F7F3A" stroke="#151515" stroke-width="4"/></svg>
+          <div><div class="rank">Quinto componente</div><p class="lbl">Etiqueta y contra etiqueta</p><div class="pctbig">5%</div><span class="price">$239 pesos</span></div>
+          <div class="note">(valores aproximados de acuerdo a entrevista con director financiero de la FLA)</div>
+        </div>
+
+        <!-- 7 Texto -->
+        <div class="slide s-text" aria-label="7 de 9">
+          <div>
+            <div class="vs"><div><small>Costo de elaboración</small><b>$4.500</b></div><div class="arrow">➜</div><div><small>Precio de venta</small><b>$44.700</b></div></div>
+            <p>A simple vista, la diferencia entre el costo de elaboración ($4.500) y el precio de venta ($44.700) sugeriría un margen industrial extraordinario. No obstante, la estructura financiera revelada por la empresa pública demuestra que la FLA actúa fundamentalmente como un agente recaudador de impuestos para el Estado.</p>
+          </div>
+        </div>
+
+        <!-- 8 Pa' dónde -->
+        <div class="slide s-peso" aria-label="8 de 9">
+          <img src="img/botella-duda.png" alt="Botella de aguardiente encogiéndose de hombros">
+          <div>
+            <h3 class="display">¿Pa' dónde va cada peso pues?</h3>
+            <p>De los $44.700 pesos que factura cada botella, la distribución del dinero se divide de forma precisa entre obligaciones tributarias e ingresos industriales:</p>
+          </div>
+        </div>
+
+        <!-- 9 Distribución -->
+        <div class="slide s-dist" aria-label="9 de 9">
+          <div>
+            <h4>Distribución de los $44.700 de cada botella</h4>
+            <div class="dist">
+              <div class="drow"><div class="name">Impuesto al Consumo<small>Departamentos comercializadores</small></div><span class="bar"><i style="--w:52%">52%</i></span><div class="imp">Financiamiento preferente de Salud y Educación regional.</div></div>
+              <div class="drow"><div class="name">Ingreso Industrial FLA<small>Operación y utilidad de la FLA</small></div><span class="bar"><i style="--w:43%;background:var(--green-2)">43%</i></span><div class="imp">Cubre costos, nómina y genera transferencias de utilidades.</div></div>
+              <div class="drow"><div class="name">IVA de Licores<small>Dirección de Impuestos (DIAN)</small></div><span class="bar"><i style="--w:5%;background:var(--ink-2)">5%</i></span><div class="imp">Impuesto nacional de tarifa diferencial para licores.</div></div>
+              <div class="drow"><div class="name">Estampilla UdeA<small>Universidad de Antioquia</small></div><span class="bar"><i style="--w:2%;background:var(--red)">2%</i></span><div class="imp">Recaudo específico destinado a la educación superior pública.</div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="ctrl">
+        <button class="btn" id="prev" aria-label="Anterior">←</button>
+        <div class="dots" id="dots" role="tablist"></div>
+        <span class="counter" id="counter">1 / 9</span>
+        <button class="btn" id="next" aria-label="Siguiente">→</button>
+      </div>
+      <div class="dl"><a href="infografia-aguardiente.pdf" download>Descargar infografía en PDF ↓</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 2. FACTURACIÓN ================= -->
+<section class="sec page" id="facturacion" data-title="Anatomía de la Facturación">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="sec-num">2</div>
+      <h2 class="display doc-h">Anatomía de la Facturación: <span class="g">¿En Qué se Convierten los $44.700 Pesos?</span></h2>
+    </div>
+    <div class="read">
+      <div class="rv">
+        <p class="doc">Una vez que la botella sale empacada de la planta de fabricación, la FLA la factura a sus distribuidores autorizados por un precio aproximado de $44.700 pesos colombianos.</p>
+        <p class="doc">A simple vista, la diferencia entre el costo de elaboración ($4.500) y el precio de venta ($44.700) sugeriría un margen industrial extraordinario. No obstante, la estructura financiera revelada por la empresa pública demuestra que la FLA actúa fundamentalmente como un agente recaudador de impuestos para el Estado.</p>
+        <p class="doc">De los $44.700 pesos que factura cada botella, la distribución del dinero se divide de forma precisa entre obligaciones tributarias e ingresos industriales:</p>
+      </div>
+    </div>
+    <div class="tbl-wrap rv" style="max-width:900px;margin-left:auto;margin-right:auto">
+      <div class="tbl-scroll">
+        <table class="doc-table">
+          <thead><tr><th>Componente del Precio</th><th>Porcentaje</th><th>Destino del Dinero</th><th>Impacto Operativo y Fiscal</th></tr></thead>
+          <tbody>
+            <tr><td>Impuesto al Consumo</td><td class="pct">52%<span class="bar"><i style="--w:52%"></i></span></td><td>Departamentos comercializadores</td><td>Financiamiento preferente de Salud y Educación regional.</td></tr>
+            <tr><td>Ingreso Industrial FLA</td><td class="pct">43%<span class="bar"><i style="--w:43%"></i></span></td><td>Operación y utilidad de la FLA</td><td>Cubre costos, nómina y genera transferencias de utilidades.</td></tr>
+            <tr><td>IVA de Licores</td><td class="pct">5%<span class="bar"><i style="--w:5%"></i></span></td><td>Dirección de Impuestos (DIAN)</td><td>Impuesto nacional de tarifa diferencial para licores.</td></tr>
+            <tr><td>Estampilla UdeA</td><td class="pct">2%<span class="bar"><i style="--w:2%"></i></span></td><td>Universidad de Antioquia</td><td>Recaudo específico destinado a la educación superior pública.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="read big3">
+      <article class="pct-card rv">
+        <div class="num">52%<small>del precio</small></div>
+        <div><h3 class="doc-h">El Impuesto al Consumo (52%)</h3>
+        <p class="doc">Representa el mayor mordisco al precio de facturación. La FLA recauda este tributo y lo gira quincenalmente a los departamentos donde efectivamente se consume la botella. Si el aguardiente se vende en Barranquilla, el 52% se transfiere a la Gobernación del Atlántico; si se vende en Medellín, se queda en las arcas de Antioquia. Este tributo se calcula mediante dos elementos normativos: un componente específico por grado de alcohol (fijado en $360 pesos por grado en 2025) y un componente ad valorem equivalente al 25% del precio de venta al público certificado anualmente por el DANE. Es importante recordar que, en Colombia, el impuesto al consumo de bebidas alcohólicas se cobra, entre otras razones, para desincentivar la ingesta excesiva y mitigar los costos que las enfermedades asociadas al alcohol le representan al sistema médico del país.</p></div>
+      </article>
+      <article class="pct-card rv">
+        <div class="num">43%<small>del precio</small></div>
+        <div><h3 class="doc-h">El Ingreso Industrial (43%)</h3>
+        <p class="doc">Es el dinero real que ingresa a la FLA para sostener su operación comercial, pagar insumos, retribuir a sus trabajadores y generar las utilidades industriales que posteriormente se transfieren a su único dueño: el Departamento de Antioquia.</p></div>
+      </article>
+      <article class="pct-card rv">
+        <div class="num">2%<small>del precio</small></div>
+        <div><h3 class="doc-h">La Estampilla Universidad de Antioquia (2%)</h3>
+        <p class="doc">Se liquida a partir del precio de venta al público certificado por el DANE antes de impuestos, mediante la expedición de actas de señalización y tornaguías de transporte, garantizando un flujo constante de recursos para la principal alma máter de la región.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VIDEO ================= -->
+<section class="video page" id="video" data-title="Video">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="kicker">Video</span>
+      <h2 class="display">El viaje de la botella <span class="g">en movimiento</span></h2>
+    </div>
+    <div class="video-stage rv">
+      <img class="pl l" src="img/pose-19.png" alt="" aria-hidden="true">
+      <div class="frame">
+        <iframe id="yt" data-src="https://www.youtube-nocookie.com/embed/CZHtCggBzLI?rel=0&amp;modestbranding=1" title="De la Caña a las Aulas — video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <img class="pl r" src="img/pose-21.png" alt="" aria-hidden="true">
+    </div>
+    <a class="yt" href="https://www.youtube.com/watch?v=CZHtCggBzLI" target="_blank" rel="noopener">Ver en YouTube ↗</a>
+  </div>
+</section>
+
+<!-- ================= 3. RECURSOS ================= -->
+<section class="sec page" id="recursos" data-title="El Torrente de Recursos">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="sec-num">3</div>
+      <h2 class="display doc-h">El Torrente de Recursos <span class="g">hacia la Gobernación en 2025</span></h2>
+    </div>
+    <div class="read">
+      <div class="rv">
+        <p class="doc">El impacto macroeconómico del aguardiente en Antioquia es masivo. En la categoría general de licores destilados, el aguardiente explica cerca del 90% de los ingresos totales de la FLA. Durante el año 2025, los ingresos netos de la empresa alcanzaron los $803.000 millones de pesos, dentro de un recaudo bruto nacional por ventas que rozó los $1,050.000 millones de pesos.</p>
+        <p class="doc">Al concentrar la mirada en las arcas del Departamento de Antioquia, el flujo de dinero girado por la licorera durante 2025 se estructuró bajo dos conceptos jurídicos y contables claramente diferenciados:</p>
+      </div>
+    </div>
+    <div class="flow" style="max-width:980px;margin-left:auto;margin-right:auto">
+      <div class="box rv doc"><div class="amt" aria-hidden="true">$480.000 M</div><strong>Recaudo del Impuesto al Consumo Local:</strong> La FLA giró a Antioquia $480.000 millones de pesos por concepto del impuesto al consumo de las botellas vendidas dentro de la jurisdicción antioqueña.</div>
+      <div class="op" aria-hidden="true">+</div>
+      <div class="box rv doc"><div class="amt" aria-hidden="true">$305.000 M</div><strong>Transferencia de Utilidad Industrial:</strong> Por concepto del contrato de cuentas en participación que regula la relación comercial entre la Gobernación y la FLA, la empresa transfirió $305.000 millones de pesos procedentes de sus ganancias operativas nacionales.</div>
+      <div class="op" aria-hidden="true">=</div>
+      <div class="box total rv"><div class="amt" aria-hidden="true">$785.000 M</div><p class="doc" style="margin:0">Según Jamer Franco, en conjunto, la FLA le entregó de manera directa a la Gobernación de Antioquia un total de $785.000 millones de pesos en 2025.</p></div>
+    </div>
+    <div class="read">
+      <p class="doc rv">Por su parte, los Estados Financieros Agregados del Departamento de Antioquia al cierre de 2025 registran de forma consolidada el peso de estas rentas tributarias dentro del presupuesto regional:</p>
+      <ul class="stats">
+        <li class="stat rv"><div class="doc"><strong>Renta del Monopolio de Licores Destilados:</strong> Aportó a las arcas departamentales $826.385 millones de pesos (incluyendo la participación de la FLA y el ingreso de licores foráneos e importados), registrando un crecimiento del 25,13% frente a 2024.</div><div class="up" aria-hidden="true">▲ 25,13%<small>vs. 2024</small></div></li>
+        <li class="stat rv"><div class="doc"><strong>Impuesto al Consumo de Licores, Vinos y Aperitivos:</strong> Generó un recaudo de $111.483 millones de pesos, con un aumento del 28,06%.</div><div class="up" aria-hidden="true">▲ 28,06%<small>aumento</small></div></li>
+        <li class="stat rv"><div class="doc"><strong>Estampilla Universidad de Antioquia:</strong> El recaudo por este tributo específico sobre tornaguías y actas de señalización alcanzó los $60.266 millones de pesos en 2025, creciendo un 23,76% respecto al año anterior.</div><div class="up" aria-hidden="true">▲ 23,76%<small>vs. 2024</small></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 4. AULAS ================= -->
+<section class="sec page" id="aulas" data-title="De la Botella a las Aulas">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="sec-num">4</div>
+      <h2 class="display doc-h">De la Botella a las Aulas: <span class="g">La Inversión en Educación Pública</span></h2>
+    </div>
+    <div class="split">
+      <div class="read" style="margin:0">
+        <div class="rv">
+          <p class="doc">Una vez que los $785.000 millones de pesos de la FLA ingresan a la Tesorería General del Departamento, la Ley 1816 de 2016 establece una directriz tajante: al menos el 51% de las rentas del monopolio de licores deben destinarse de forma prioritaria a los sectores sociales de salud y educación.</p>
+          <p class="doc">Dado que la FLA entrega estos recursos en un solo bloque presupuestal, la Gobernación de Antioquia es la encargada de distribuir el dinero entre las metas de su Plan de Desarrollo. Durante la vigencia 2025, el Gasto Público Social en Educación ejecutado por el Departamento alcanzó la suma de $2.293.442 millones de pesos (financiado mayoritariamente por el Sistema General de Participaciones de la Nación por $2.360.117 millones y complementado por rentas propias como las del licor).</p>
+          <p class="doc">Dentro de ese gran presupuesto educativo, los recursos derivados del consumo de licor llegan directamente a las instituciones públicas de educación superior y a los programas regionales a través de canales específicos:</p>
+        </div>
+
+        <h3 class="sub rv doc-h">Apoyo a Instituciones de Educación Superior</h3>
+        <p class="doc rv">A través del rubro de transferencias para programas de educación, el Departamento distribuyó $570.046 millones de pesos en 2025, beneficiando a la red universitaria de Antioquia:</p>
+        <ul class="unis">
+          <li class="uni rv"><div class="doc"><strong>Universidad de Antioquia (UdeA):</strong> Recibió $76.537 millones de pesos por transferencias directas de programas educativos. A esta cifra se le suma el recaudo directo de $60.266 millones de pesos por la Estampilla UdeA. Adicionalmente, los estados financieros revelan que el Departamento mantiene con la UdeA una obligación de largo plazo denominada Bono Valor Constante Serie B, cuyo pasivo se situó en $56.335 millones de pesos al cierre de 2025, tras realizarse pagos por $9.755 millones de pesos en el período.</div><span class="bar" aria-hidden="true"><i style="--w:88.5%"></i></span></li>
+          <li class="uni rv"><div class="doc"><strong>Politécnico Colombiano Jaime Isaza Cadavid:</strong> Recibió $86.484 millones de pesos en transferencias para programas, más $13.792 millones de pesos generados por su estampilla propia.</div><span class="bar" aria-hidden="true"><i style="--w:100%"></i></span></li>
+          <li class="uni rv"><div class="doc"><strong>Institución Universitaria Digital de Antioquia:</strong> Recibió $39.373 millones de pesos en programas, además de $9.506 millones por concepto de estampilla.</div><span class="bar" aria-hidden="true"><i style="--w:45.5%"></i></span></li>
+          <li class="uni rv"><div class="doc"><strong>Tecnológico de Antioquia:</strong> Beneficiado con transferencias por $27.328 millones de pesos.</div><span class="bar" aria-hidden="true"><i style="--w:31.6%"></i></span></li>
+          <li class="uni rv"><div class="doc"><strong>Institución Universitaria de Envigado:</strong> Recibió $8.442 millones de pesos.</div><span class="bar" aria-hidden="true"><i style="--w:9.8%"></i></span></li>
+        </ul>
+
+        <h3 class="sub rv doc-h">Fomento a la Educación Terciaria y Becas</h3>
+        <div class="callout rv"><div class="ico" aria-hidden="true">🎓</div><p class="doc">Los recursos de rentas de licores alimentan de forma directa el Fondo Gilberto Echeverri Mejía, administrado por la corporación del mismo nombre para otorgar becas de matrícula y sostenimiento a jóvenes de municipios no certificados. Al cierre de 2025, la Corporación ejecutó un presupuesto de $29.352 millones de pesos en recursos entregados en administración por la Gobernación, beneficiando a miles de estudiantes en la región.</p></div>
+
+        <h3 class="sub rv doc-h">Alimentación Escolar y Educación Básica</h3>
+        <div class="callout rv"><div class="ico" aria-hidden="true">🍎</div><p class="doc">Los programas de Alimentación Escolar (PAE) y cobertura educativa en los municipios antioqueños absorbieron $293.477 millones de pesos dentro de las transferencias departamentales, garantizando la permanencia escolar de los niños y jóvenes en las subregiones.</p></div>
+      </div>
+      <aside class="side" aria-hidden="true"><img src="img/pose-06.png" alt=""></aside>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONCLUSIÓN ================= -->
+<section class="sec page" id="conclusion" data-title="Conclusión">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="sec-num">5</div>
+      <h2 class="display doc-h">Conclusión: <span class="g">Un Círculo Económico Redondo</span></h2>
+    </div>
+    <div class="concl rv">
+      <img class="think" src="img/pose-18.png" alt="" aria-hidden="true">
+      <p class="doc">El trayecto de una botella de aguardiente tapa verde de 750 ml demuestra cómo la industria licorera oficial se ha consolidado como un pilar fundamental de la hacienda pública antioqueña.</p>
+      <p class="doc">Desde la compra de toneladas de caña de azúcar en el Valle del Cauca y el meticuloso embotellado de $4.500 pesos en Itagüí, hasta la facturación comercial de $44.700 pesos, hacen que resulte paradójico ver como cada botella vendida en un bar, estanco, restaurante o tienda de barrio se convierten en un impacto, muchas veces negativo, que afecta a la sociedad, la familia y los sistemas públicos, pero que al mismo tiempo los ingresos fiscales que el estado recauda por los impuestos a estas bebidas, son también un engranaje directo de equidad social. Los $785.000 millones de pesos que la FLA transfirió a Antioquia en 2025 demuestran que, más allá de la tradición y normalización del consumo, cada copa servida termina convertida en aulas universitarias pero también en deterioro laboral y académico para quien excede continuamente la ingesta de alcohol, becas para jóvenes rurales pero impacto familiar y emocional a quienes sufren las consecuencias del consumo irresponsable y desbordado, hospitales equipados pero altos costos para la salud pública por el tratamiento de enfermedades crónicas, accidentes y trastornos mentales derivados del alcohol. Es cierto entonces, que los ingresos de la fabricación y venta de alcohol contribuyen enormemente a la educación y al desarrollo económico de la región, pero sin embargo no se puede dejar de lado el hecho cierto de que el consumo desmedido de estas bebidas afecta directamente a las familias y a la salud pública. Es menester del estado y de cada ciudadano hacer un uso responsable de los productos etílicos y evitar así que el capital que genera las rentas del alcohol se quede, como si de un circulo vicioso se tratara, en el tratamiento de las problemáticas que este mismo consumo pueda generar.</p>
+    </div>
+  </div>
+</section>
+
+<div class="warn"><p class="doc">El exceso de alcohol es perjudicial para la salud, prohíbase el expendio de bebidas embriagantes a menores de edad.</p></div>
+<footer>
+  <img src="img/pose-01.png" alt="" aria-hidden="true">
+  De la Caña a las Aulas · María Isabel Villa Avila &amp; Emmanuel Amaya Ramírez · 2026
+</footer>
+
+<script>
+(function(){
+  // Reveal on scroll
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:.15});
+  document.querySelectorAll('.rv,.tbl-wrap,.uni').forEach(function(el){ io.observe(el); });
+
+  // Páginas separadas (una sección por página, con #enlace propio)
+  var prog = document.getElementById('progress');
+  var pages = Array.prototype.slice.call(document.querySelectorAll('.page'));
+  var links = Array.prototype.slice.call(document.querySelectorAll('.nav a.lk'));
+  var yt = document.getElementById('yt');
+  pages.forEach(function(p,i){
+    var prv = pages[i-1], nxt = pages[i+1];
+    var d = document.createElement('nav');
+    d.className = 'pager'; d.setAttribute('aria-label','Navegación entre páginas');
+    d.innerHTML =
+      (prv ? '<a class="pv" href="#'+prv.id+'"><small>← Anterior</small><span>'+prv.dataset.title+'</span></a>' : '') +
+      '<div class="pos">Página '+(i+1)+' de '+pages.length+'</div>' +
+      (nxt ? '<a class="nx" href="#'+nxt.id+'"><small>Siguiente →</small><span>'+nxt.dataset.title+'</span></a>' : '');
+    p.appendChild(d);
+  });
+  function show(){
+    var id = (location.hash || '#inicio').slice(1);
+    var target = document.getElementById(id);
+    var page = target && target.closest('.page');
+    if (!page) page = pages[0];
+    pages.forEach(function(p){ p.classList.toggle('current', p === page); });
+    links.forEach(function(a){ a.classList.toggle('on', a.getAttribute('href') === '#'+page.id); });
+    var i = pages.indexOf(page);
+    prog.style.width = ((i+1) / pages.length * 100) + '%';
+    document.title = (i ? page.dataset.title + ' · ' : '') + 'De la Caña a las Aulas';
+    if (yt) { if (page.id === 'video') { if (!yt.src) yt.src = yt.dataset.src; } else if (yt.src) { yt.removeAttribute('src'); } }
+    var on = document.querySelector('.nav a.lk.on'); if (on && on.scrollIntoView) on.scrollIntoView({block:'nearest',inline:'center'});
+    window.scrollTo({top:0, behavior:'instant'});
+    if (page.id === 'infografia' && window.__carouselReset) window.__carouselReset();
+  }
+  addEventListener('hashchange', show);
+  show();
+
+  // Carousel
+  var track = document.getElementById('track');
+  var slides = track.querySelectorAll('.slide');
+  var dots = document.getElementById('dots');
+  var prev = document.getElementById('prev'), next = document.getElementById('next');
+  var counter = document.getElementById('counter');
+  var idx = 0;
+  slides.forEach(function(_,i){
+    var b = document.createElement('button');
+    b.setAttribute('aria-label','Ir a la diapositiva ' + (i+1));
+    b.addEventListener('click', function(){ go(i); });
+    dots.appendChild(b);
+  });
+  function w(){ return slides[0].offsetWidth || track.clientWidth || 1; }
+  function go(i){ i = Math.max(0, Math.min(slides.length-1, i|0)); idx = i; track.scrollTo({left: i * w()}); render(i); }
+  function update(){
+    var i = Math.round(track.scrollLeft / w());
+    if (!isFinite(i)) i = 0;
+    i = Math.max(0, Math.min(slides.length-1, i));
+    idx = i; render(i);
+  }
+  function render(i){
+    slides.forEach(function(s,k){ s.classList.toggle('active', k === i); });
+    Array.prototype.forEach.call(dots.children, function(d,k){ d.classList.toggle('on', k === i); });
+    counter.textContent = (i+1) + ' / ' + slides.length;
+    prev.disabled = i === 0; next.disabled = i === slides.length - 1;
+  }
+  var t; track.addEventListener('scroll', function(){ clearTimeout(t); t = setTimeout(update, 60); }, {passive:true});
+  prev.addEventListener('click', function(){ go(idx-1); });
+  next.addEventListener('click', function(){ go(idx+1); });
+  track.addEventListener('keydown', function(e){
+    if (e.key === 'ArrowRight'){ e.preventDefault(); go(idx+1); }
+    if (e.key === 'ArrowLeft'){ e.preventDefault(); go(idx-1); }
+  });
+  addEventListener('resize', function(){ go(idx); });
+  window.__carouselReset = function(){ track.scrollLeft = 0; idx = 0; render(0); };
+  render(0);
+})();
+</script>
+</body>
+</html>
